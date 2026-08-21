@@ -1,20 +1,29 @@
 ```
-# Dependencies
-node_modules/
-
-# Editors
-.vscode/
-
-# Logs and temp files
-*.log
-*.tmp
-*.swp
+# Compressed files
+*.tar.gz
 
 # Environment
 .env
 .env.local
 *.env.*
-```.next/
+
+# Logs and temp files
+*.log
+*.tmp
+
+# Editors
+.vscode/
+.idea/
+
+# Dependencies
+node_modules/
+.venv/
+venv/
+__pycache__/
+.mypy_cache/
+.pytest_cache/
 dist/
 build/
-.next/
+target/
+.gradle/
+```.next/
