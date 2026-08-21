@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanban + Трекер Привычек</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📋 Kanban + 🎯 Трекер Привычек</h1>
+        </header>
+
+        <nav class="tabs">
+            <button class="tab-btn active" data-tab="kanban">Kanban Доска</button>
+            <button class="tab-btn" data-tab="habits">Трекер Привычек</button>
+        </nav>
+
+        <!-- Kanban Board Section -->
+        <section id="kanban" class="tab-content active">
+            <div class="kanban-controls">
+                <input type="text" id="newTaskInput" placeholder="Новая задача..." />
+                <button id="addTaskBtn">Добавить задачу</button>
+            </div>
+            
+            <div class="kanban-board">
+                <div class="column" data-status="todo">
+                    <div class="column-header">
+                        <h2>📝 To Do</h2>
+                        <span class="task-count">0</span>
+                    </div>
+                    <div class="task-list" data-status="todo"></div>
+                </div>
+
+                <div class="column" data-status="in-progress">
+                    <div class="column-header">
+                        <h2>🔄 In Progress</h2>
+                        <span class="task-count">0</span>
+                    </div>
+                    <div class="task-list" data-status="in-progress"></div>
+                </div>
+
+                <div class="column" data-status="done">
+                    <div class="column-header">
+                        <h2>✅ Done</h2>
+                        <span class="task-count">0</span>
+                    </div>
+                    <div class="task-list" data-status="done"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Habit Tracker Section -->
+        <section id="habits" class="tab-content">
+            <div class="habit-controls">
+                <input type="text" id="newHabitInput" placeholder="Новая привычка..." />
+                <button id="addHabitBtn">Добавить привычку</button>
+            </div>
+
+            <div class="habit-tracker">
+                <div class="habit-header">
+                    <div class="habit-name">Привычка</div>
+                    <div class="week-days">
+                        <div class="day-col">Пн</div>
+                        <div class="day-col">Вт</div>
+                        <div class="day-col">Ср</div>
+                        <div class="day-col">Чт</div>
+                        <div class="day-col">Пт</div>
+                        <div class="day-col">Сб</div>
+                        <div class="day-col">Вс</div>
+                    </div>
+                    <div class="habit-actions">Статистика</div>
+                </div>
+                <div id="habitList" class="habit-list"></div>
+            </div>
+        </section>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
